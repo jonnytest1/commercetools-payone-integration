@@ -75,6 +75,8 @@ subprojects {
         implementation "ch.qos.logback:logback-access:${depVersions.logbackClassic}"
         implementation "org.slf4j:jul-to-slf4j:${depVersions.julToSlf4j}"
         implementation "org.apache.httpcomponents:httpclient:${depVersions.apacheHttp}"
+        
+        
     }
 }
 
@@ -90,6 +92,11 @@ project(":service") {
 
     dependencies {
         implementation "com.sparkjava:spark-core:${depVersions.sparkCore}"
+        
+           // https://mvnrepository.com/artifact/jakarta.xml.bind/jakarta.xml.bind-api
+		implementation group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '3.0.1'
+        // https://mvnrepository.com/artifact/com.sun.xml.bind/jaxb-impl
+		implementation group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '3.0.2'
         constraints {
             implementation "org.eclipse.jetty:jetty-io:${depVersions.jetty}"
             implementation "org.eclipse.jetty:jetty-server:${depVersions.jetty}"
